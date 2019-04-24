@@ -18,7 +18,7 @@ class RoleSeeder extends Seeder
         $newRoles = collect($roles)->diff($existingRoles);
 
         foreach ($newRoles as $role) {
-            $this->command->getOutput()->writeln("<info>New role: </info>".$role);
+            $this->command->getOutput()->writeln('<info>New role: </info>'.$role);
             Role::create(['name' => $role]);
         }
     }
