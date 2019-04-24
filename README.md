@@ -14,5 +14,14 @@ Website bursa project
 2. Install dependency `composer install`
 3. Copy `.env.example` to `.env`
 4. generate application key `php artisan key:generate`
-5. Run migration and seed `php artisan migrate --seed`
-6. start server `php artisan serve`
+5. Setup variables in `.env` file
+   ```
+   DB_DATABASE=yourdatabasename
+   DB_USERNAME=yourdatabaseusername
+   DB_PASSWORD=yourdatabasepassword
+
+   GOOGLE_CLIENT_ID=yourgoogleclientid
+   GOOGLE_CLIENT_SECRET=yourgoogleclientsecret
+   ```
+6. Run migration and seed `php artisan migrate --seed`
+7. start server `php artisan serve`
