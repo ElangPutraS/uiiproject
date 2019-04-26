@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('project_owner_id')->index();
             $table->string('title')->default('Untitled');
-            $table->text('about')->default('');
+            $table->text('description')->default('');
             $table->date('duration_start')->nullable();
             $table->date('duration_end')->nullable();
             $table->boolean('is_published')->default(false);

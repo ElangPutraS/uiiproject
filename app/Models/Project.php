@@ -15,7 +15,7 @@ class Project extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'about' , 'duration_start', 'duration_end'];
+    protected $fillable = ['title', 'description' , 'duration_start', 'duration_end'];
 
     /**
      * Belongs to project_owner.
