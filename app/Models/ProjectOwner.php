@@ -11,7 +11,7 @@ class ProjectOwner extends Model
      *
      * @var bool
      */
-    protected $incrementing = false;
+    public $incrementing = false;
 
     /**
      * The attributes that are mass assignable.
