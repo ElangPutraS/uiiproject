@@ -16,7 +16,7 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->index()->primary();
             $table->string('nim')->nullable();
-            $table->text('about');
+            $table->text('about')->nullable();
             $table->timestamps();
 
             $table->foreign('id')->references('id')->on('users')
