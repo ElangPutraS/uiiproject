@@ -4,7 +4,7 @@ Website bursa project
 # Setup Guide
 
 ## Requirement
-1. PHP version >= 7.1.3
+1. PHP version >= 7.2
 2. Composer
 3. php-pgsql and all [PHP-ext for laravel 5.8] (https://laravel.com/docs/5.8/installation#installation)
 4. Database Postgresql version >= 9.6
