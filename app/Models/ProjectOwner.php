@@ -40,7 +40,7 @@ class ProjectOwner extends Model
     {
         return $this->hasMany(Project::class);
     }
-    
+
     /**
      * Has many draft projects.
      *
