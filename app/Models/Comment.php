@@ -14,7 +14,7 @@ class Comment extends Model
     protected $fillable = ['project_id', 'message'];
 
     /**
-     * Belongs to project
+     * Belongs to project.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -24,7 +24,7 @@ class Comment extends Model
     }
 
     /**
-     * Belongs to user
+     * Belongs to user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

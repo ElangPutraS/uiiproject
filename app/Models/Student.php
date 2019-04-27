@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Enums\StatusOfferal;
+use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {

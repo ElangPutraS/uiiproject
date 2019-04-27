@@ -10,6 +10,6 @@ $factory->define(ProjectOwner::class, function (Faker $faker) {
         'id' => factory(User::class)->create()->id,
         'nik' => $faker->randomDigit(16),
         'about' => $faker->realText(),
-        'company' => $faker->company
+        'company' => $faker->company,
     ];
 });
