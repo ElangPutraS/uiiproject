@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
 Auth::routes([
     'verify' => true,
 ]);
+
+Route::get('/login/google', 'Auth\GoogleController@redirect')->name('google.redirect');
+Route::get('/login/google/callback', 'Auth\GoogleController@callback')->name('google.callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
