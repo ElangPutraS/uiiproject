@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Tag;
+use App\Models\Student;
 use App\Enums\StatusOfferal;
+use App\Models\ProjectOwner;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -44,7 +47,9 @@ class Project extends Model
      */
     public function bidders()
     {
-        return $this->belongsToMany(Student::class, 'offerals');
+        return $this->belongsToMany(Student::class, 'offerals')
+            ->withPivot(['status'])
+            ->withTimestamps();
     }
 
     /**
@@ -54,7 +59,7 @@ class Project extends Model
      */
     public function students()
     {
-        return $this->belongsToMany(Student::class, 'offerals')
+        return $this->bidders()
             ->wherePivot('status', '=', StatusOfferal::ACCEPT);
     }
 

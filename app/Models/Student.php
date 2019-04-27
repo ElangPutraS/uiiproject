@@ -39,7 +39,7 @@ class Student extends Model
     public function offerals()
     {
         return $this->belongsToMany(Project::class, 'offerals')
-            ->wherePivot('status', '=', StatusOfferal::OFFER)
+            ->withPivot(['status'])
             ->withTimestamps();
     }
 
@@ -50,8 +50,7 @@ class Student extends Model
      */
     public function projects()
     {
-        return $this->belongsToMany(Project::class, 'offerals')
-            ->wherePivot('status', '=', StatusOfferal::ACCEPT)
-            ->withTimestamps();
+        return $this->offerals()
+            ->wherePivot('status', '=', StatusOfferal::ACCEPT);
     }
 }

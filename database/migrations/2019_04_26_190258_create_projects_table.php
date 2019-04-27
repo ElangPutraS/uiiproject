@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration
             $table->date('duration_start')->nullable();
             $table->date('duration_end')->nullable();
             $table->boolean('is_published')->default(false);
+            $table->boolean('is_done')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });
