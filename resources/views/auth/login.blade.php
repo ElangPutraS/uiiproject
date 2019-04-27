@@ -7,7 +7,13 @@
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
+                
                 <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6 offset-md-4">
+                            <a href="{{ route('google.redirect') }}" class="btn btn-outline-primary">Login Google</a>
+                        </div>
+                    </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
