@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Laravel\Socialite\Facades\Socialite;
 use App\Services\GoogleUserService;
-use Illuminate\Validation\ValidationException;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Validation\ValidationException;
 
 class GoogleController extends Controller
 {
@@ -37,7 +37,7 @@ class GoogleController extends Controller
         }
 
         throw ValidationException::withMessages([
-            'email' => [trans('auth.failed')]
+            'email' => [trans('auth.failed')],
         ]);
     }
 }

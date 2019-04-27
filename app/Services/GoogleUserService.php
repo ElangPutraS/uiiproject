@@ -11,7 +11,7 @@ use Laravel\Socialite\Two\User as GoogleUser;
 class GoogleUserService
 {
     /**
-     * get or create user from google provider
+     * get or create user from google provider.
      *
      * @param \Laravel\Socialite\Two\User $googleUser
      * @return \App\Models\User|null
@@ -33,13 +33,13 @@ class GoogleUserService
      * Check is email provided is student email.
      *
      * @param string $email
-     * @return boolean
+     * @return bool
      */
     protected function isStudentEmail(string $email): bool
     {
         return Str::endsWith($email, 'students.uii.ac.id');
     }
-    
+
     /**
      * Create a User with Student Role from provided user.
      *
@@ -76,6 +76,7 @@ class GoogleUserService
     protected function getNimFromEmail(string $email): ?string
     {
         $nim = str_replace_last('@students.uii.ac.id', '', $email);
+
         return is_numeric($nim) ? $nim : null;
     }
 }
