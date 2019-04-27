@@ -14,12 +14,12 @@ $factory->define(Project::class, function (Faker $faker) {
         'description' => $faker->realText(200),
         'duration_start' => $start = $faker->dateTimeThisMonth(),
         'duration_end' => Carbon::parse($start)->addDays(rand(7, 100)),
-        'is_published' => true
+        'is_published' => true,
     ];
 });
 
 $factory->state(Project::class, 'draft', function (Faker $faker) {
     return [
-        'is_published' => false
+        'is_published' => false,
     ];
 });

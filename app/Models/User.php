@@ -17,7 +17,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'phone', 'email', 'password', 'avatar', 'google_id'
+        'name', 'phone', 'email', 'password', 'avatar', 'google_id',
     ];
 
     /**
@@ -51,7 +51,7 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
-     * Maybe has one student
+     * Maybe has one student.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -61,7 +61,7 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
-     * Maybe has one project_owner
+     * Maybe has one project_owner.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

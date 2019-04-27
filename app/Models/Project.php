@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use App\Enums\StatusOfferal;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Enums\StatusOfferal;
 
 class Project extends Model
 {
@@ -15,7 +15,7 @@ class Project extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'description' , 'duration_start', 'duration_end'];
+    protected $fillable = ['title', 'description', 'duration_start', 'duration_end'];
 
     /**
      * Belongs to project_owner.
@@ -39,7 +39,7 @@ class Project extends Model
 
     /**
      * Has many bidders.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function bidders()
