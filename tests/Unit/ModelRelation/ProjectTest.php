@@ -51,7 +51,7 @@ class ProjectTest extends TestCase
     public function testHasManyBidders()
     {
         $project = factory(Project::class)->create();
-        $users   = factory(Student::class, 5)->create();
+        $users = factory(Student::class, 5)->create();
 
         foreach ($users as $user) {
             $user->offerals()->attach($project->id);
@@ -68,8 +68,8 @@ class ProjectTest extends TestCase
     public function testHasManyStudents()
     {
         $project = factory(Project::class)->create();
-        $students   = factory(Student::class, 5)->create();
-        $student    = $students->first();
+        $students = factory(Student::class, 5)->create();
+        $student = $students->first();
 
         foreach ($students as $student) {
             $student->offerals()->attach($project->id);
@@ -89,7 +89,7 @@ class ProjectTest extends TestCase
     {
         $project = factory(Project::class)->create();
         factory(Comment::class, 20)->create([
-            'project_id' => $project->id
+            'project_id' => $project->id,
         ]);
 
         $this->assertCount(20, $project->comments);
@@ -103,9 +103,8 @@ class ProjectTest extends TestCase
     public function testHasManyDiscussions()
     {
         $project = factory(Project::class)->create();
-        factory(Discussion::class
-        , 20)->create([
-            'project_id' => $project->id
+        factory(Discussion::class, 20)->create([
+            'project_id' => $project->id,
         ]);
 
         $this->assertCount(20, $project->discussions);
