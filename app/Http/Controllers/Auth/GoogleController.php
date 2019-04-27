@@ -38,6 +38,6 @@ class GoogleController extends Controller
 
         throw ValidationException::withMessages([
             'email' => [trans('auth.failed')],
-        ]);
+        ])->redirect('/login');
     }
 }
