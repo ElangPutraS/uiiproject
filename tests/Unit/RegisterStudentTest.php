@@ -3,11 +3,11 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Laravel\Socialite\Two\User as GoogleUser;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\Services\GoogleUserService;
 use App\Enums\RoleEnum;
+use App\Services\GoogleUserService;
+use Illuminate\Foundation\Testing\WithFaker;
+use Laravel\Socialite\Two\User as GoogleUser;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class RegisterStudentTest extends TestCase
 {
@@ -23,7 +23,7 @@ class RegisterStudentTest extends TestCase
         parent::setUp();
 
         $this->seed([
-            \RoleSeeder::class
+            \RoleSeeder::class,
         ]);
     }
 
@@ -55,30 +55,30 @@ class RegisterStudentTest extends TestCase
         $id = $this->faker->randomDigit(21);
         $firstName = $this->faker->firstName;
         $lastName = $this->faker->lastName;
-        $email = $nim . '@students.uii.ac.id';
+        $email = $nim.'@students.uii.ac.id';
         $avatar = $this->faker->imageUrl('150', '150');
         $googleUser->setRaw([
             'sub' => $id,
-            'name' => $firstName . ' ' . $lastName,
+            'name' => $firstName.' '.$lastName,
             'given_name' => $firstName,
             'family_name' => $lastName,
-            'profile' => 'https://plus.google.com/'. $id,
+            'profile' => 'https://plus.google.com/'.$id,
             'picture' => $avatar,
             'email' => $email,
             'email_verified' => true,
             'locale' => 'en',
             'id' => $id,
             'verified_email' => true,
-            'link' => 'https://plus.google.com/'. $id,
+            'link' => 'https://plus.google.com/'.$id,
         ]);
         $googleUser->map([
             'id' => $id,
-            'name' => $firstName . ' ' . $lastName,
+            'name' => $firstName.' '.$lastName,
             'email' => $email,
             'avatar' => $avatar,
             'avatar_original' => $avatar,
             'token' => 'ya29.Glv4BqBQWnQdgbYU1sQesiTmvJrKCx-fq1BjdxsFuPIVQUmT-ai860Nhb0G_QFn-AsdOxujpLwGN3EsKyVfwfqxicEAeJ9YFnxr3P3OulSR7gR_WTY39tHngPvqv',
-            'expiresIn' => 3600
+            'expiresIn' => 3600,
         ]);
 
         return $googleUser;
