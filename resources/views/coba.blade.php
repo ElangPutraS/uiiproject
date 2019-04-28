@@ -56,7 +56,7 @@
     </div>
 
     {{-- Content --}}
-    <div class="row mt-5">
+    <div class="row mt-5 flex-row-reverse flex-md-row flex-wrap-reverse flex-sm-wrap">
         <div class="col-md-8">
             <div><h1 class="h6">Showing 10 Projects</h1></div>
             <div class="row">
@@ -82,17 +82,19 @@
                 @endforeach
             </div>
         </div>
-        <div class="col-md-4 sidebar-content flex-1">
+        <div class="col-md-4 sidebar-content flex-1 mb-3 mb-sm-0">
             <h3>Tags</h3>
-            <a href="#" class="btn btn-link">PHP <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Java <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Go <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Python <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Javascript <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Laravel <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Research <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Website <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
-            <a href="#" class="btn btn-link">Machine Learning <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+            <div class="content-tags">
+                <a href="#" class="btn btn-link">PHP <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Java <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Go <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Python <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Javascript <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Laravel <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Research <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Website <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+                <a href="#" class="btn btn-link">Machine Learning <span class="badge badge-primary"><small>{{ rand(1,100) }}</small></span></a>
+            </div>
         </div>
     </div>
 </div>
