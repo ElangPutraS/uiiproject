@@ -21,3 +21,5 @@ Route::get('/login/google', 'Auth\GoogleController@redirect')->name('google.redi
 Route::get('/login/google/callback', 'Auth\GoogleController@callback')->name('google.callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('/coba', 'coba');
