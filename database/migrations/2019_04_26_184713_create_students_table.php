@@ -17,6 +17,7 @@ class CreateStudentsTable extends Migration
             $table->unsignedBigInteger('id')->index()->primary();
             $table->string('nim')->nullable();
             $table->text('about')->nullable();
+            $table->string('cv')->nullable();
             $table->timestamps();
 
             $table->foreign('id')->references('id')->on('users')

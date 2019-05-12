@@ -17,7 +17,8 @@ class CreateProjectOwnersTable extends Migration
             $table->unsignedBigInteger('id')->primary();
             $table->text('about')->nullable();
             $table->string('company');
-            $table->string('nik');
+            $table->string('nik')->nullable();
+            $table->string('relation');
             $table->timestamps();
 
             $table->foreign('id')->references('id')->on('users')
