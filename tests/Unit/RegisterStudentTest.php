@@ -35,6 +35,7 @@ class RegisterStudentTest extends TestCase
     public function testRegisterStudent()
     {
         $googleUser = $this->fakeGoogleUser($nim = '12312332');
+        /** @var $service \App\Services\GoogleUserService */
         $service = $this->app->make(GoogleUserService::class);
 
         $user = $service->getUser($googleUser);

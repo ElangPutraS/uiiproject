@@ -54,6 +54,7 @@ class GoogleUserService
                 'name' => $googleUser->getName(),
                 'avatar' => $googleUser->getAvatar(),
                 'google_id' => $googleUser->getId(),
+                'nickname' => $googleUser->offsetGet('given_name'),
             ]);
             $user->email_verified_at = now();
             $user->save();
