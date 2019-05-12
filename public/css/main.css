@@ -1,0 +1,19 @@
+nav.navbar .ui.pointing.menu {
+    border-bottom: none;
+}
+nav.navbar .ui.pointing.menu .item {
+    align-self: center;
+    min-width: 7.5vw;
+    justify-content: center;
+}
+#mobile-menu {
+    display:flex;
+    height: 90%;
+}
+#mobile-menu .ui.item {
+    flex: 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}

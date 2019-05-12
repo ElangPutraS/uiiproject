@@ -11,7 +11,7 @@
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('/', 'landing-page');
 
 Auth::routes([
     'verify' => true,
