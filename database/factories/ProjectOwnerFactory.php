@@ -12,6 +12,6 @@ $factory->define(ProjectOwner::class, function (Faker $faker) {
         'nik' => $faker->randomDigit(16),
         'about' => $faker->realText(),
         'company' => $faker->company,
-        'relation' => 'guest'
+        'relation' => 'guest',
     ];
 });
